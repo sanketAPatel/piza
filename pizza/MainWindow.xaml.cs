@@ -328,6 +328,7 @@ namespace pizza
             command.CommandTimeout = 60;
             conn.Open();
             MySqlDataReader mdr = command.ExecuteReader();
+            lblMsg.Content = "Order Saved!!";
             conn.Close();
         }
 

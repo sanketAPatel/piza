@@ -72,8 +72,8 @@
             <RadioButton x:Name="rdbtnthick" Content="Thick : 1$" Height="21" Checked="rdbtnthick_Checked" Background="#FFF7ECEC" FontFamily="Britannic Bold" Foreground="#FFFBF6F6"/>
             <RadioButton x:Name="rdbtnthin" Content="Thin : 2$" Height="21" Checked="rdbtnthin_Checked" Background="#FFF7ECEC" FontFamily="Britannic Bold" Foreground="#FFFBF6F6"/>
         </StackPanel>
-        <Button x:Name="btnSave" Content="Save" HorizontalAlignment="Left" Margin="304,373,0,0" VerticalAlignment="Top" Width="112" Height="24" Click="btnSave_Click"/>
-        <Label Content="" HorizontalAlignment="Left" Margin="466,373,0,0" VerticalAlignment="Top" Width="218" FontFamily="Britannic Bold" FontSize="15" Background="#FFF7EAEA"/>
+        <Button x:Name="btnSave" Content="Save" HorizontalAlignment="Left" Margin="304,373,0,0" VerticalAlignment="Top" Width="112" Height="24" Click="btnSave_Click" Background="#FF5CC33E" FontFamily="Britannic Bold" FontSize="15" Foreground="#FFF5EDED"/>
+        <Label x:Name="lblMsg" Content="" HorizontalAlignment="Left" Margin="466,373,0,0" VerticalAlignment="Top" Width="218" FontFamily="Britannic Bold" FontSize="15" Background="#FFF7EAEA"/>
         <Button Content="" HorizontalAlignment="Left" Margin="0,212,0,0" VerticalAlignment="Top" Width="98" Height="70" Cursor="" Click="Button_Click_1">
             <Button.Background>
                 <ImageBrush ImageSource="icons8-instagram-48.png"/>
@@ -87,7 +87,7 @@
                 <ImageBrush ImageSource="icons8-close-window-50.png"/>
             </Button.Background>
         </Button>
-        <Button Content="Button" HorizontalAlignment="Left" Margin="156,373,0,0" VerticalAlignment="Top" Width="109" Click="Button_Click_3"/>
+        <Button Content="Go2Order" HorizontalAlignment="Left" Margin="156,373,0,0" VerticalAlignment="Top" Width="109" Click="Button_Click_3" Background="#FF5CC33E" Foreground="#FFF1EBEB" FontFamily="Britannic Bold" FontSize="15"/>
 
 
     </Grid>

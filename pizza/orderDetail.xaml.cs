@@ -49,11 +49,17 @@ namespace pizza
             MySqlDataReader mdr = command.ExecuteReader();
             while (mdr.Read())
             {
-                cbb1.Items.Add(mdr.GetValue(0).ToString());
-                cbb2.Items.Add(mdr.GetValue(1).ToString());
-                cbb3.Items.Add(mdr.GetValue(3).ToString());
-                cbb4.Items.Add(mdr.GetValue(4).ToString());
-                cbb5.Items.Add(mdr.GetValue(5).ToString());
+                //cbb1.Items.Add(mdr.GetValue(0).ToString());
+                //cbb2.Items.Add(mdr.GetValue(1).ToString());
+                //cbb3.Items.Add(mdr.GetValue(3).ToString());
+                tb1.Text = mdr.GetValue(0).ToString();
+                tb2.Text = mdr.GetValue(1).ToString();
+                tb3.Text = mdr.GetValue(3).ToString();
+                tb4.Text = mdr.GetValue(4).ToString();
+                tb5.Text = mdr.GetValue(5).ToString();
+                tb6.Text = mdr.GetValue(6).ToString();
+                //cbb4.Items.Add(mdr.GetValue(4).ToString());
+                //cbb5.Items.Add(mdr.GetValue(5).ToString());
 
             }
             command.Dispose();
