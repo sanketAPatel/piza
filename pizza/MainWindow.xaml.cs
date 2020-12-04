@@ -36,13 +36,17 @@ namespace pizza
         double total = 0.0;
         string toppings = "";
         string extras = "";
-        ArrayList list = new ArrayList();
+        int id = 0;
+
 
         public MainWindow()
         {
             InitializeComponent();
         }
 
+        /*radiobutton for  size 
+         **param @ double sizePrize
+         */
         private void rdbtnsm_Checked(object sender, RoutedEventArgs e)
         {
             if (rdbtnsm.IsChecked == true)
@@ -52,6 +56,10 @@ namespace pizza
             }
             lblTotal.Content = findTotal();
         }
+
+        /*radiobutton for  size 
+         **param @ double sizePrize
+         */
         private void rdbtnmed_Checked(object sender, RoutedEventArgs e)
         {
             if (rdbtnmed.IsChecked == true)
@@ -62,6 +70,9 @@ namespace pizza
             lblTotal.Content = findTotal();
         }
 
+        /*radiobutton for  size 
+         **param @ double sizePrize
+         */
         private void rdbtnlarge_Checked(object sender, RoutedEventArgs e)
         {
             if (rdbtnlarge.IsChecked == true)
@@ -72,6 +83,9 @@ namespace pizza
             lblTotal.Content = findTotal();
         }
 
+        /*radiobutton for  crust 
+         **param @ double crustPrize
+         */
         private void rdbtnthick_Checked(object sender, RoutedEventArgs e)
         {
             if (rdbtnthick.IsChecked == true)
@@ -82,6 +96,9 @@ namespace pizza
             lblTotal.Content = findTotal();
         }
 
+        /*radiobutton for  crust 
+         **param @ double crustPrize
+         */
         private void rdbtnthin_Checked(object sender, RoutedEventArgs e)
         {
             if (rdbtnthin.IsChecked == true)
@@ -92,6 +109,9 @@ namespace pizza
             lblTotal.Content = findTotal();
         }
 
+        /*checkbox for  toppings
+         **param @ double toppintPrize
+         */
         private void cbOnion_Checked(object sender, RoutedEventArgs e)
         {
             if (cbOnion.IsChecked == true)
@@ -111,6 +131,9 @@ namespace pizza
             lblTotal.Content = findTotal();
         }
 
+        /*checkbox for  toppings
+         **param @ double toppintPrize
+         */
         private void cbMushroom_Checked(object sender, RoutedEventArgs e)
         {
             if (cbMushroom.IsChecked == true)
@@ -130,6 +153,9 @@ namespace pizza
             lblTotal.Content = findTotal();
         }
 
+        /*checkbox for  toppings
+         **param @ double toppintPrize
+         */
         private void cbOlives_Checked(object sender, RoutedEventArgs e)
         {
             if (cbOlives.IsChecked == true)
@@ -138,7 +164,6 @@ namespace pizza
                 if (toppingSelected > 3)
                 {
                     toppingPrize += 1.0;
-
                 }
                 toppings = string.Concat(toppings, "olives, ");
             }
@@ -150,6 +175,9 @@ namespace pizza
             lblTotal.Content = findTotal();
         }
 
+        /*checkbox for  toppings
+         **param @ double toppintPrize
+         */
         private void cbPineapple_Checked(object sender, RoutedEventArgs e)
         {
             if (cbPineapple.IsChecked == true)
@@ -169,6 +197,9 @@ namespace pizza
             lblTotal.Content = findTotal();
         }
 
+        /*checkbox for toppings
+         **param @ double toppintPrize
+         */
         private void cbPepper_Checked(object sender, RoutedEventArgs e)
         {
             if (cbPepper.IsChecked == true)
@@ -188,7 +219,9 @@ namespace pizza
             lblTotal.Content = findTotal();
         }
 
-
+        /*checkbox for side selection
+         **param @ double sideprize
+         */
         private void cbDipping_Checked(object sender, RoutedEventArgs e)
         {
             if (cbDipping.IsChecked == true)
@@ -204,6 +237,9 @@ namespace pizza
             lblTotal.Content = findTotal();
         }
 
+        /*checkbox for side selection
+         **param @ double sideprize
+         */
         private void cbChknWng_Checked(object sender, RoutedEventArgs e)
         {
             if (cbChknWng.IsChecked == true)
@@ -219,6 +255,9 @@ namespace pizza
             lblTotal.Content = findTotal();
         }
 
+        /*checkbox for side selection
+         **param @ double sideprize
+         */
         private void cbPop_Checked(object sender, RoutedEventArgs e)
         {
             if (cbPop.IsChecked == true)
@@ -234,6 +273,9 @@ namespace pizza
             lblTotal.Content = findTotal();
         }
 
+        /*checkbox for side selection
+         **param @ double sideprize
+         */
         private void cbBrownie_Checked(object sender, RoutedEventArgs e)
         {
             if (cbBrownie.IsChecked == true)
@@ -249,6 +291,7 @@ namespace pizza
             lblTotal.Content = findTotal();
         }
 
+        /*This method will find the total*/
         public double findTotal()
         {
             totalPrize = sizePrize + crustPrize + toppingPrize + sidePrize;
@@ -260,23 +303,45 @@ namespace pizza
             return totalPrize;
         }
 
+        /* Social media Button*/
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             System.Diagnostics.Process.Start("https://www.facebook.com/pages/category/Pizza-Place/Pizza-Pizza-349301015552294/");
         }
+        /* Social media Button*/
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+            System.Diagnostics.Process.Start("https://www.instagram.com/pizzapizzaltd/?hl=en");
+        }
 
-
+        /*Database record saving 
+         * 
+         */
         private void btnSave_Click(object sender, RoutedEventArgs e)
         {
+
             string connectionString = "datasource=localhost;port= 3306;username=root;password=admin;database=Orders";
-            string querry = "INSERT INTO o1(`size`,`crust`,`toppings`,`extras`,`total`)" +
-            "VALUES('" + size + "','" + crust + "','" + toppings + "','" + extras + "','" + total + "')";
+            string querry = "INSERT INTO o1(`id`,`size`,`crust`,`toppings`,`extras`,`total`)" +
+            "VALUES('" + id + "','" + size + "','" + crust + "','" + toppings + "','" + extras + "','" + total + "')";
             MySqlConnection conn = new MySqlConnection(connectionString);
             MySqlCommand command = new MySqlCommand(querry, conn);
             command.CommandTimeout = 60;
             conn.Open();
             MySqlDataReader mdr = command.ExecuteReader();
             conn.Close();
+        }
+
+        /* This will close an application*/
+        private void Button_Click_2(object sender, RoutedEventArgs e)
+        {
+            Close();
+        }
+
+        private void Button_Click_3(object sender, RoutedEventArgs e)
+        {
+            this.Hide();
+            orderDetail od = new orderDetail();
+            od.Show();
         }
     }
 }

@@ -1,0 +1,21 @@
+﻿<Window x:Class="pizza.orderDetail"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:pizza"
+        mc:Ignorable="d"
+        Title="orderDetail" Height="450" Width="800">
+    <Grid>
+        <Button Content="Button" HorizontalAlignment="Left" Margin="114,24,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click"/>
+        <TextBox x:Name="tbId" HorizontalAlignment="Left" Height="28" Margin="421,40,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <Label Content="    Order ID" HorizontalAlignment="Left" Margin="294,40,0,0" VerticalAlignment="Top" Width="100" Background="#FF5CC33E" FontFamily="Britannic Bold" Foreground="#FFF7F7F7" FontSize="15" RenderTransformOrigin="0.05,0.63" Height="28"/>
+        <Button Content="Button" HorizontalAlignment="Left" Margin="577,42,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click_1"/>
+        <ComboBox x:Name="cbb1" HorizontalAlignment="Left" Margin="67,108,0,0" VerticalAlignment="Top" Width="97" Height="27" FontFamily="Britannic Bold"/>
+        <ComboBox x:Name="cbb5" HorizontalAlignment="Left" Margin="538,108,0,0" VerticalAlignment="Top" Width="97" Height="27" FontFamily="Britannic Bold"/>
+        <ComboBox x:Name="cbb4" HorizontalAlignment="Left" Margin="421,108,0,0" VerticalAlignment="Top" Width="97" Height="27" FontFamily="Britannic Bold"/>
+        <ComboBox x:Name="cbb3" HorizontalAlignment="Left" Margin="297,108,0,0" VerticalAlignment="Top" Width="97" Height="27" FontFamily="Britannic Bold"/>
+        <ComboBox x:Name="cbb2" HorizontalAlignment="Left" Margin="183,108,0,0" VerticalAlignment="Top" Width="97" Height="27" FontFamily="Britannic Bold"/>
+
+    </Grid>
+</Window>

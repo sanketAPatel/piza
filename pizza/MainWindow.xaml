@@ -20,6 +20,9 @@
         <DockPanel HorizontalAlignment="Left" Height="72" LastChildFill="False" VerticalAlignment="Top" Width="792" Background="#FFF07C09"/>
         <DockPanel LastChildFill="False" Margin="0,72,0,0" Width="100" HorizontalAlignment="Left" Background="#FF6C757D">
             <Button Content="" Height="70" VerticalAlignment="Top" Width="98" Margin="0,41,0,0" Click="Button_Click" Focusable="False">
+                <Button.Foreground>
+                    <ImageBrush/>
+                </Button.Foreground>
                 <Button.Background>
                     <ImageBrush ImageSource="icons8-facebook-48.png"/>
                 </Button.Background>
@@ -36,7 +39,7 @@
         <StackPanel HorizontalAlignment="Left" Height="143" Margin="630,191,0,0" VerticalAlignment="Top" Width="100" Background="#FFF07C09"/>
         <Label Content="      Receipt" HorizontalAlignment="Left" Margin="630,146,0,0" VerticalAlignment="Top" Width="100" Background="#FF5CC33E" FontFamily="Britannic Bold" Foreground="#FFF7F7F7" FontSize="15" RenderTransformOrigin="1.88,0.889" Height="28"/>
         <StackPanel Margin="392,191,300,113" Orientation="Vertical">
-          
+
             <CheckBox x:Name="cbOnion" Content="Onion" HorizontalAlignment="Left" VerticalAlignment="Top" RenderTransformOrigin="1.579,-8.5" Width="100" Height="21" Checked="cbOnion_Checked" Unchecked="cbOnion_Checked" Foreground="#FFFBF9F9" FontFamily="Britannic Bold"/>
             <CheckBox x:Name="cbMushroom" Content="Mushroom" HorizontalAlignment="Left" VerticalAlignment="Top" RenderTransformOrigin="1.579,-8.5" Width="100" Height="21" Checked="cbMushroom_Checked" Unchecked="cbMushroom_Checked" Foreground="#FFFBF9F9" FontFamily="Britannic Bold"/>
             <CheckBox x:Name="cbOlives" Content="Olives" HorizontalAlignment="Left" VerticalAlignment="Top" RenderTransformOrigin="1.579,-8.5" Width="100" Height="21" Checked="cbOlives_Checked" Unchecked="cbOlives_Checked" Foreground="#FFFBF9F9" FontFamily="Britannic Bold"/>
@@ -71,6 +74,20 @@
         </StackPanel>
         <Button x:Name="btnSave" Content="Save" HorizontalAlignment="Left" Margin="304,373,0,0" VerticalAlignment="Top" Width="112" Height="24" Click="btnSave_Click"/>
         <Label Content="" HorizontalAlignment="Left" Margin="466,373,0,0" VerticalAlignment="Top" Width="218" FontFamily="Britannic Bold" FontSize="15" Background="#FFF7EAEA"/>
+        <Button Content="" HorizontalAlignment="Left" Margin="0,212,0,0" VerticalAlignment="Top" Width="98" Height="70" Cursor="" Click="Button_Click_1">
+            <Button.Background>
+                <ImageBrush ImageSource="icons8-instagram-48.png"/>
+            </Button.Background>
+            <Button.Foreground>
+                <ImageBrush ImageSource="icons8-instagram-48.png"/>
+            </Button.Foreground>
+        </Button>
+        <Button Content="Button" HorizontalAlignment="Left" Margin="26,327,0,0" VerticalAlignment="Top" Width="46" Height="55" Click="Button_Click_2">
+            <Button.Background>
+                <ImageBrush ImageSource="icons8-close-window-50.png"/>
+            </Button.Background>
+        </Button>
+        <Button Content="Button" HorizontalAlignment="Left" Margin="156,373,0,0" VerticalAlignment="Top" Width="109" Click="Button_Click_3"/>
 
 
     </Grid>

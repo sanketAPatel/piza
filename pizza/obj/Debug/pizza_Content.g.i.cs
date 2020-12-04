@@ -8,6 +8,6 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("icons8-facebook-48.png")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("icons8-close-window-50.png")]
 
 
