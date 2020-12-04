@@ -38,11 +38,8 @@ namespace pizza
         {
             string connectionString = "datasource=localhost;port= 3306;username=root;password=admin;database=Orders";
             int id = Convert.ToInt32(tbId.Text);
-
             string querry = "select * from o1 where id='" + id + "'";
-
             MySqlConnection conn = new MySqlConnection(connectionString);
-
             MySqlCommand command = new MySqlCommand(querry, conn);
             command.CommandTimeout = 60;
             conn.Open();
@@ -60,7 +57,6 @@ namespace pizza
                 tb6.Text = mdr.GetValue(6).ToString();
                 //cbb4.Items.Add(mdr.GetValue(4).ToString());
                 //cbb5.Items.Add(mdr.GetValue(5).ToString());
-
             }
             command.Dispose();
             conn.Close();
