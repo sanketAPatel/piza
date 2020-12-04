@@ -31,7 +31,7 @@ namespace pizza
         double totalPrize = 0.0;
         double taxAmount = 0.0;
         double grandTotal = 0.00;
-        string size="";
+        string size = "";
         string crust = "";
         double total = 0.0;
         string toppings = "";
@@ -51,7 +51,6 @@ namespace pizza
                 size = "small";
             }
             lblTotal.Content = findTotal();
-
         }
         private void rdbtnmed_Checked(object sender, RoutedEventArgs e)
         {
@@ -61,7 +60,6 @@ namespace pizza
                 size = "Med";
             }
             lblTotal.Content = findTotal();
-
         }
 
         private void rdbtnlarge_Checked(object sender, RoutedEventArgs e)
@@ -72,7 +70,6 @@ namespace pizza
                 size = "Large";
             }
             lblTotal.Content = findTotal();
-
         }
 
         private void rdbtnthick_Checked(object sender, RoutedEventArgs e)
@@ -83,7 +80,6 @@ namespace pizza
                 crust = "Thick";
             }
             lblTotal.Content = findTotal();
-
         }
 
         private void rdbtnthin_Checked(object sender, RoutedEventArgs e)
@@ -94,7 +90,6 @@ namespace pizza
                 crust = "Thin";
             }
             lblTotal.Content = findTotal();
-
         }
 
         private void cbOnion_Checked(object sender, RoutedEventArgs e)
@@ -107,7 +102,6 @@ namespace pizza
                     toppingPrize += 1.0;
                 }
                 toppings = string.Concat(toppings, "onion, ");
-
             }
             else
             {
@@ -115,8 +109,6 @@ namespace pizza
                 toppings = toppings.Replace("onion, ", "");
             }
             lblTotal.Content = findTotal();
-            
-
         }
 
         private void cbMushroom_Checked(object sender, RoutedEventArgs e)
@@ -129,18 +121,13 @@ namespace pizza
                     toppingPrize += 1.0;
                 }
                 toppings = string.Concat(toppings, "mshrom, ");
-
             }
             else
             {
                 toppingPrize = toppingPrize - 1.0;
                 toppings = toppings.Replace("mshrom, ", "");
-
             }
             lblTotal.Content = findTotal();
-            
-
-
         }
 
         private void cbOlives_Checked(object sender, RoutedEventArgs e)
@@ -159,13 +146,10 @@ namespace pizza
             {
                 toppingPrize = toppingPrize - 1.0;
                 toppings = toppings.Replace("olives, ", "");
-
-
             }
             lblTotal.Content = findTotal();
-            
-
         }
+
         private void cbPineapple_Checked(object sender, RoutedEventArgs e)
         {
             if (cbPineapple.IsChecked == true)
@@ -175,21 +159,14 @@ namespace pizza
                 {
                     toppingPrize += 1.0;
                 }
-
                 toppings = string.Concat(toppings, "pineple, ");
-                
             }
             else
             {
                 toppingPrize = toppingPrize - 1.0;
-
                 toppings = toppings.Replace("pineple, ", "");
             }
             lblTotal.Content = findTotal();
-            
-
-
-
         }
 
         private void cbPepper_Checked(object sender, RoutedEventArgs e)
@@ -202,18 +179,13 @@ namespace pizza
                     toppingPrize += 1.0;
                 }
                 toppings = string.Concat(toppings, "pepper, ");
-
             }
             else
             {
                 toppingPrize = toppingPrize - 1.0;
                 toppings = toppings.Replace("pepper, ", "");
-
-
             }
             lblTotal.Content = findTotal();
-            
-
         }
 
 
@@ -223,16 +195,13 @@ namespace pizza
             {
                 sidePrize += 1.0;
                 extras = string.Concat(extras, "dipping, ");
-                
             }
-
             else
             {
                 sidePrize -= 1.0;
                 extras = extras.Replace("dipping, ", "");
             }
             lblTotal.Content = findTotal();
-
         }
 
         private void cbChknWng_Checked(object sender, RoutedEventArgs e)
@@ -241,27 +210,21 @@ namespace pizza
             {
                 sidePrize += 5.0;
                 extras = string.Concat(extras, "chknwing, ");
-
             }
-
             else
             {
                 sidePrize -= 5.0;
                 extras = extras.Replace("chknwing, ", "");
-
             }
             lblTotal.Content = findTotal();
-
         }
 
         private void cbPop_Checked(object sender, RoutedEventArgs e)
         {
-
             if (cbPop.IsChecked == true)
             {
                 sidePrize += 1.0;
                 extras = string.Concat(extras, "pop, ");
-
             }
             else
             {
@@ -269,8 +232,6 @@ namespace pizza
                 extras = extras.Replace("pop, ", "");
             }
             lblTotal.Content = findTotal();
-
-
         }
 
         private void cbBrownie_Checked(object sender, RoutedEventArgs e)
@@ -279,25 +240,17 @@ namespace pizza
             {
                 sidePrize = 5.0;
                 extras = string.Concat(extras, "Brownie, ");
-
             }
             else
             {
                 sidePrize -= 5.0;
                 extras = extras.Replace("Brownie, ", "");
-
             }
             lblTotal.Content = findTotal();
-
-
         }
-        
-
-
 
         public double findTotal()
         {
-
             totalPrize = sizePrize + crustPrize + toppingPrize + sidePrize;
             taxAmount = 0.13 * (totalPrize);
             grandTotal = totalPrize + taxAmount;
@@ -312,26 +265,18 @@ namespace pizza
             System.Diagnostics.Process.Start("https://www.facebook.com/pages/category/Pizza-Place/Pizza-Pizza-349301015552294/");
         }
 
-        
-    private void btnSave_Click(object sender, RoutedEventArgs e)
+
+        private void btnSave_Click(object sender, RoutedEventArgs e)
         {
-           string connectionString = "datasource=localhost;port= 3306;username=root;password=admin;database=Orders";
-            //       string querry = "INSERT INTO order(`Small`,`Med`,`Large`,`Thin`,`Thick`,`Onion`,`Mushroom`,`Olives`,`Pineapple`,`Pepper`,`Dipping`,`Chknwing`,`Brownie`,`Pop`,`Total`)" +
-            //"VALUES('" + Small + "','" + Med + "','" + Large + "','" + Thin + "','" + Thick + "','" + Onion + "','" + Mushroom + "','" + Olives + "','" + Pineapple + "','" + Pepper + "','" + Dipping + "','" + Chknwing + "','" + Brownie + "','" + Pop + "','" + Total + "')";
+            string connectionString = "datasource=localhost;port= 3306;username=root;password=admin;database=Orders";
             string querry = "INSERT INTO o1(`size`,`crust`,`toppings`,`extras`,`total`)" +
             "VALUES('" + size + "','" + crust + "','" + toppings + "','" + extras + "','" + total + "')";
-           // string querry = "INSERT INTO o2(`toppings`)" +
-            //           "VALUES('" + toppings + "')";
-                   MySqlConnection conn = new MySqlConnection(connectionString);
-                 MySqlCommand command = new MySqlCommand(querry, conn);
-
-                  command.CommandTimeout = 60;
-                   conn.Open();
-           MySqlDataReader mdr=  command.ExecuteReader();
-                   conn.Close();
-
-
-
+            MySqlConnection conn = new MySqlConnection(connectionString);
+            MySqlCommand command = new MySqlCommand(querry, conn);
+            command.CommandTimeout = 60;
+            conn.Open();
+            MySqlDataReader mdr = command.ExecuteReader();
+            conn.Close();
         }
     }
 }
