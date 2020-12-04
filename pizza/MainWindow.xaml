@@ -1,0 +1,77 @@
+﻿<Window x:Class="pizza.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:pizza"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Window.Resources>
+        <BitmapImage x:Key="ImageSource1" >piza.png</BitmapImage>
+    </Window.Resources>
+    <Grid>
+        <Grid.Background>
+            <ImageBrush ImageSource="bg.jpg" Stretch="UniformToFill"/>
+        </Grid.Background>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition Height="0*"/>
+        </Grid.RowDefinitions>
+        <DockPanel HorizontalAlignment="Left" Height="72" LastChildFill="False" VerticalAlignment="Top" Width="792" Background="#FFF07C09"/>
+        <DockPanel LastChildFill="False" Margin="0,72,0,0" Width="100" HorizontalAlignment="Left" Background="#FF6C757D">
+            <Button Content="" Height="70" VerticalAlignment="Top" Width="98" Margin="0,41,0,0" Click="Button_Click" Focusable="False">
+                <Button.Background>
+                    <ImageBrush ImageSource="icons8-facebook-48.png"/>
+                </Button.Background>
+            </Button>
+        </DockPanel>
+        <Label Content="pizza pizza" HorizontalAlignment="Left" Margin="214,10,0,0" VerticalAlignment="Top" Width="202" Height="53" RenderTransformOrigin="0.495,0.5" FontSize="30" FontFamily="Britannic Bold" Foreground="White"/>
+        <Image Margin="0,0,692,347" Source="p1.jpg" Stretch="Fill" RenderTransformOrigin="1.94,2.986"/>
+        <Label Content="       Size" HorizontalAlignment="Left" Margin="146,146,0,0" VerticalAlignment="Top" Width="100" Background="#FF5CC33E" FontFamily="Britannic Bold" Foreground="#FFF7F7F7" FontSize="15" RenderTransformOrigin="0.05,0.63" Height="28"/>
+        <Label Content="       Crust" HorizontalAlignment="Left" Margin="268,145,0,0" VerticalAlignment="Top" Width="100" Background="#FF5CC33E" FontFamily="Britannic Bold" Foreground="#FFF7F7F7" FontSize="15" RenderTransformOrigin="1.88,0.889" Height="28"/>
+        <StackPanel HorizontalAlignment="Left" Height="143" Margin="392,191,0,0" VerticalAlignment="Top" Width="100" Background="#FFF07C09"/>
+        <Label Content="   Toppings" HorizontalAlignment="Left" Margin="392,146,0,0" VerticalAlignment="Top" Width="100" Background="#FF5CC33E" FontFamily="Britannic Bold" Foreground="#FFF7F7F7" FontSize="15" RenderTransformOrigin="1.88,0.889" Height="28"/>
+        <StackPanel HorizontalAlignment="Left" Height="143" Margin="510,191,0,0" VerticalAlignment="Top" Width="100" Background="#FFF07C09"/>
+        <Label Content="        Side" HorizontalAlignment="Left" Margin="510,145,0,0" VerticalAlignment="Top" Width="100" Background="#FF5CC33E" FontFamily="Britannic Bold" Foreground="#FFF7F7F7" FontSize="15" RenderTransformOrigin="1.88,0.889" Height="28"/>
+        <StackPanel HorizontalAlignment="Left" Height="143" Margin="630,191,0,0" VerticalAlignment="Top" Width="100" Background="#FFF07C09"/>
+        <Label Content="      Receipt" HorizontalAlignment="Left" Margin="630,146,0,0" VerticalAlignment="Top" Width="100" Background="#FF5CC33E" FontFamily="Britannic Bold" Foreground="#FFF7F7F7" FontSize="15" RenderTransformOrigin="1.88,0.889" Height="28"/>
+        <StackPanel Margin="392,191,300,113" Orientation="Vertical">
+          
+            <CheckBox x:Name="cbOnion" Content="Onion" HorizontalAlignment="Left" VerticalAlignment="Top" RenderTransformOrigin="1.579,-8.5" Width="100" Height="21" Checked="cbOnion_Checked" Unchecked="cbOnion_Checked" Foreground="#FFFBF9F9" FontFamily="Britannic Bold"/>
+            <CheckBox x:Name="cbMushroom" Content="Mushroom" HorizontalAlignment="Left" VerticalAlignment="Top" RenderTransformOrigin="1.579,-8.5" Width="100" Height="21" Checked="cbMushroom_Checked" Unchecked="cbMushroom_Checked" Foreground="#FFFBF9F9" FontFamily="Britannic Bold"/>
+            <CheckBox x:Name="cbOlives" Content="Olives" HorizontalAlignment="Left" VerticalAlignment="Top" RenderTransformOrigin="1.579,-8.5" Width="100" Height="21" Checked="cbOlives_Checked" Unchecked="cbOlives_Checked" Foreground="#FFFBF9F9" FontFamily="Britannic Bold"/>
+            <CheckBox x:Name="cbPineapple" Content="Pineapple" HorizontalAlignment="Left" VerticalAlignment="Top" RenderTransformOrigin="1.579,-8.5" Width="100" Height="21" Checked="cbPineapple_Checked" Unchecked="cbPineapple_Checked" Foreground="#FFFBF9F9" FontFamily="Britannic Bold"/>
+            <CheckBox x:Name="cbPepper" Content="Pepper" HorizontalAlignment="Left" VerticalAlignment="Top" RenderTransformOrigin="1.579,-8.5" Width="100" Height="21" Checked="cbPepper_Checked" Unchecked="cbPepper_Checked" Foreground="#FFFBF9F9" FontFamily="Britannic Bold" />
+        </StackPanel>
+        <StackPanel Margin="510,194,182,127" Orientation="Vertical">
+            <CheckBox x:Name="cbDipping" Content="Dipping : 1$" HorizontalAlignment="Left" VerticalAlignment="Top" RenderTransformOrigin="1.579,-8.5" Width="100" Height="21" Checked="cbDipping_Checked" Unchecked="cbDipping_Checked" Foreground="#FFFBF9F9" FontFamily="Britannic Bold"/>
+            <CheckBox x:Name="cbChknWng" Content="ChknWng : 5$" HorizontalAlignment="Left" VerticalAlignment="Top" RenderTransformOrigin="1.579,-8.5" Width="100" Height="21" Checked="cbChknWng_Checked" Unchecked="cbChknWng_Checked" Foreground="#FFFBF9F9" FontFamily="Britannic Bold"/>
+            <CheckBox x:Name="cbPop" Content="Pop : 1$" HorizontalAlignment="Left" VerticalAlignment="Top" RenderTransformOrigin="1.579,-8.5" Width="100" Height="21" Checked="cbPop_Checked" Unchecked="cbPop_Checked" Foreground="#FFFBF9F9" FontFamily="Britannic Bold"/>
+            <CheckBox x:Name="cbBrownie" Content="Brownie : 5$" HorizontalAlignment="Left" VerticalAlignment="Top" RenderTransformOrigin="1.579,-8.5" Width="100" Height="21" Checked="cbBrownie_Checked" Unchecked="cbBrownie_Checked" Foreground="#FFFBF9F9" FontFamily="Britannic Bold"/>
+        </StackPanel>
+        <Label Content="         123456789" HorizontalAlignment="Left" Margin="510,10,0,0" VerticalAlignment="Top" Width="262" Height="53" RenderTransformOrigin="0.495,0.5" FontSize="30" FontFamily="Britannic Bold" Foreground="White"/>
+        <Image Margin="510,13,232,356" Source="icons8-cell-phone-50.png" Stretch="Fill"/>
+        <Label Content="Tax" HorizontalAlignment="Left" Margin="630,231,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.964,0.037" Height="28" Foreground="#FFFBF9F9" FontFamily="Britannic Bold"/>
+        <Label Content="Total" HorizontalAlignment="Left" Margin="630,194,0,0" VerticalAlignment="Top" Width="40" Height="32" Foreground="#FFFBF9F9" FontFamily="Britannic Bold"/>
+        <Label Content="Total&#xD;&#xA;Price" HorizontalAlignment="Left" Margin="630,261,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.964,0.037" Width="54" Height="45" Foreground="#FFFBF9F9" FontFamily="Britannic Bold"/>
+        <Label x:Name="lblTotal" Content="" HorizontalAlignment="Left" Margin="688,194,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.964,0.037" Width="42" Height="28" Background="#FFFDF7F7"/>
+        <Label x:Name="lblTax" Content="" HorizontalAlignment="Left" Margin="688,231,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.964,0.037" Width="42" Height="28" Background="#FFFDF7F7"/>
+        <Label x:Name="lblTp" Content="" HorizontalAlignment="Left" Margin="689,264,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.964,0.037" Width="41" Height="28" Background="#FFFDF7F7"/>
+        <Label Content="                                                   Select Pizza Options" HorizontalAlignment="Left" Margin="146,108,0,0" VerticalAlignment="Top" Width="584" Background="#FF5CC33E" FontFamily="Britannic Bold" Foreground="#FFF7F7F7" FontSize="15" RenderTransformOrigin="0.05,0.63" Height="28"/>
+
+        <StackPanel HorizontalAlignment="Left" Height="143" Margin="146,191,0,0" VerticalAlignment="Top" Width="100" Background="#FFF07C09">
+
+        </StackPanel>
+        <RadioButton x:Name="rdbtnmed" Content="Med : 08$" HorizontalAlignment="Left" Margin="147,191,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.778,-2.625" Checked="rdbtnmed_Checked" Width="100" Height="21" Foreground="#FFF3E3E3" FontFamily="Britannic Bold"/>
+        <RadioButton x:Name="rdbtnlarge" Content="Large : 10$" HorizontalAlignment="Left" Margin="147,235,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.778,-2.625" Checked="rdbtnlarge_Checked" Width="100" Height="21" Foreground="#FFF3E3E3" FontFamily="Britannic Bold"/>
+        <RadioButton x:Name="rdbtnsm" Content="Small : 05$" HorizontalAlignment="Left" Margin="147,212,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.778,-2.625" Checked="rdbtnsm_Checked" Width="100" Height="21" Foreground="#FFF3E3E3" FontFamily="Britannic Bold"/>
+        <StackPanel HorizontalAlignment="Left" Height="145" Margin="268,189,0,0" VerticalAlignment="Top" Width="100" Background="#FFF07C09">
+            <RadioButton x:Name="rdbtnthick" Content="Thick : 1$" Height="21" Checked="rdbtnthick_Checked" Background="#FFF7ECEC" FontFamily="Britannic Bold" Foreground="#FFFBF6F6"/>
+            <RadioButton x:Name="rdbtnthin" Content="Thin : 2$" Height="21" Checked="rdbtnthin_Checked" Background="#FFF7ECEC" FontFamily="Britannic Bold" Foreground="#FFFBF6F6"/>
+        </StackPanel>
+        <Button x:Name="btnSave" Content="Save" HorizontalAlignment="Left" Margin="304,373,0,0" VerticalAlignment="Top" Width="112" Height="24" Click="btnSave_Click"/>
+        <Label Content="" HorizontalAlignment="Left" Margin="466,373,0,0" VerticalAlignment="Top" Width="218" FontFamily="Britannic Bold" FontSize="15" Background="#FFF7EAEA"/>
+
+
+    </Grid>
+</Window>
