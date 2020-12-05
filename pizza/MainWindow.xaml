@@ -39,13 +39,12 @@
         <StackPanel HorizontalAlignment="Left" Height="143" Margin="630,191,0,0" VerticalAlignment="Top" Width="100" Background="#FFF07C09"/>
         <Label Content="      Receipt" HorizontalAlignment="Left" Margin="630,146,0,0" VerticalAlignment="Top" Width="100" Background="#FF5CC33E" FontFamily="Britannic Bold" Foreground="#FFF7F7F7" FontSize="15" RenderTransformOrigin="1.88,0.889" Height="28"/>
         <StackPanel Margin="392,191,300,113" Orientation="Vertical">
-
             <CheckBox x:Name="cbOnion" Content="Onion" HorizontalAlignment="Left" VerticalAlignment="Top" RenderTransformOrigin="1.579,-8.5" Width="100" Height="21" Checked="cbOnion_Checked" Unchecked="cbOnion_Checked" Foreground="#FFFBF9F9" FontFamily="Britannic Bold"/>
             <CheckBox x:Name="cbMushroom" Content="Mushroom" HorizontalAlignment="Left" VerticalAlignment="Top" RenderTransformOrigin="1.579,-8.5" Width="100" Height="21" Checked="cbMushroom_Checked" Unchecked="cbMushroom_Checked" Foreground="#FFFBF9F9" FontFamily="Britannic Bold"/>
             <CheckBox x:Name="cbOlives" Content="Olives" HorizontalAlignment="Left" VerticalAlignment="Top" RenderTransformOrigin="1.579,-8.5" Width="100" Height="21" Checked="cbOlives_Checked" Unchecked="cbOlives_Checked" Foreground="#FFFBF9F9" FontFamily="Britannic Bold"/>
             <CheckBox x:Name="cbPineapple" Content="Pineapple" HorizontalAlignment="Left" VerticalAlignment="Top" RenderTransformOrigin="1.579,-8.5" Width="100" Height="21" Checked="cbPineapple_Checked" Unchecked="cbPineapple_Checked" Foreground="#FFFBF9F9" FontFamily="Britannic Bold"/>
             <CheckBox x:Name="cbPepper" Content="Pepper" HorizontalAlignment="Left" VerticalAlignment="Top" RenderTransformOrigin="1.579,-8.5" Width="100" Height="21" Checked="cbPepper_Checked" Unchecked="cbPepper_Checked" Foreground="#FFFBF9F9" FontFamily="Britannic Bold" />
-        </StackPanel>
+        </StackPanel  >
         <StackPanel Margin="510,194,182,127" Orientation="Vertical">
             <CheckBox x:Name="cbDipping" Content="Dipping : 1$" HorizontalAlignment="Left" VerticalAlignment="Top" RenderTransformOrigin="1.579,-8.5" Width="100" Height="21" Checked="cbDipping_Checked" Unchecked="cbDipping_Checked" Foreground="#FFFBF9F9" FontFamily="Britannic Bold"/>
             <CheckBox x:Name="cbChknWng" Content="ChknWng : 5$" HorizontalAlignment="Left" VerticalAlignment="Top" RenderTransformOrigin="1.579,-8.5" Width="100" Height="21" Checked="cbChknWng_Checked" Unchecked="cbChknWng_Checked" Foreground="#FFFBF9F9" FontFamily="Britannic Bold"/>

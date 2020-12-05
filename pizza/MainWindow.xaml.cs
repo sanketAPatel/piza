@@ -38,7 +38,6 @@ namespace pizza
         string extras = "";
         int id = 0;
 
-
         public MainWindow()
         {
             InitializeComponent();
@@ -314,12 +313,11 @@ namespace pizza
             System.Diagnostics.Process.Start("https://www.instagram.com/pizzapizzaltd/?hl=en");
         }
 
-        /*Database record saving 
+        /*Database record for saving  Ordered Data
          * 
          */
         private void btnSave_Click(object sender, RoutedEventArgs e)
         {
-
             string connectionString = "datasource=localhost;port= 3306;username=root;password=admin;database=Orders";
             string querry = "INSERT INTO o1(`id`,`size`,`crust`,`toppings`,`extras`,`total`)" +
             "VALUES('" + id + "','" + size + "','" + crust + "','" + toppings + "','" + extras + "','" + total + "')";
@@ -338,6 +336,7 @@ namespace pizza
             Close();
         }
 
+        /* This will close main application Window and Open Order DEtail Window*/
         private void Button_Click_3(object sender, RoutedEventArgs e)
         {
             this.Hide();
